@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import poc.redis.service.RedisService;
+import poc.redis.service.redis.RedisService;
 
 @RestController
 @RequestMapping("/redis")
-@RequiredArgsConstructor
 public class RedisController {
 
     @Autowired

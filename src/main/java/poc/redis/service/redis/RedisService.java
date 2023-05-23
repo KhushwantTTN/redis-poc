@@ -1,4 +1,4 @@
-package poc.redis.service;
+package poc.redis.service.redis;
 
 public interface RedisService {
 

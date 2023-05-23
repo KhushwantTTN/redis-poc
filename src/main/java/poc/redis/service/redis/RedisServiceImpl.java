@@ -1,7 +1,8 @@
-package poc.redis.service;
+package poc.redis.service.redis;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import poc.redis.service.redis.RedisService;
 
 @Service
 public class RedisServiceImpl implements RedisService {
@@ -14,11 +15,11 @@ public class RedisServiceImpl implements RedisService {
 
     @Override
     public void set(String key, Object value) {
-
+        redisTemplate.opsForValue().set(key, value);
     }
 
     @Override
     public Object get(String key) {
-        return null;
+        return redisTemplate.opsForValue().get(key);
     }
 }
